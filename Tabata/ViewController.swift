@@ -71,6 +71,11 @@ class ViewController: UIViewController {
     
     @IBAction func startPressed(_ sender: UIButton) {
         
+       // sender.setTitle("YO", for: .normal)
+        
+        
+        
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         }
      
@@ -83,7 +88,7 @@ class ViewController: UIViewController {
                 
             } else {
              timer.invalidate()
-             
+                
             playSound()
             }
         
