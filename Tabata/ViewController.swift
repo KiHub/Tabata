@@ -19,7 +19,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        start.layer.cornerRadius = 25
+        stop.layer.cornerRadius = 25
+        slider.minimumTrackTintColor = UIColor.black
+        
+        
+        
+        
     }
 
     
