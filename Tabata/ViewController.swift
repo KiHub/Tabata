@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var player: AVAudioPlayer?
     
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3") else { return }
+        guard let url = Bundle.main.url(forResource: "retro_sound", withExtension: "wav") else { return }
 
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
@@ -37,6 +37,30 @@ class ViewController: UIViewController {
     }
     
     
+    func playSoundTwice() {
+        guard let url = Bundle.main.url(forResource: "retro_sound", withExtension: "wav") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+            
+            player.numberOfLoops = 2
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
@@ -55,6 +79,9 @@ class ViewController: UIViewController {
         //slider.currentMinimumTrackImage = UIImage.
         slider.setValue(30, animated: true)
         
+       
+       
+        
         
         
         
@@ -66,17 +93,50 @@ class ViewController: UIViewController {
         
         seconds = Int(sender.value)
         label.text = String(seconds)
+       
+        
+       // if seconds.isMultiple(of: 30) { print("ALARM2!") }
+        
+        
         
     }
     
     @IBAction func startPressed(_ sender: UIButton) {
         
-       // sender.setTitle("YO", for: .normal)
+      //  sender.setTitle("NOO", for: .normal)
+        
+      //  timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        
+      //  if let buttonTitle = sender.title(for: .normal) {
+    //        print(buttonTitle)
+    //      }
+        let buttonTitle = sender.title(for: .normal)
+        print("\(String(describing: buttonTitle))")
+        
+        switch buttonTitle {
+        case "NOO":
+            timer.invalidate()
+            seconds = 30
+            slider.setValue(30, animated: true)
+            label.text = "30"
+            sender.setTitle("GOO", for: .normal)
+            
+            
+            
+        default:
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            sender.setTitle("NOO", for: .normal)
+            
+            
+            
+        }
+        
+       
+        
+    
         
         
         
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         }
      
         @objc func updateTimer() {
@@ -84,15 +144,25 @@ class ViewController: UIViewController {
              seconds -= 1
                 label.text = String(seconds)
                 slider.setValue(Float(seconds), animated: true)
-         //    print(Float(secondsPassed) / Float(totalTime))
+             print("\(seconds)")
+                if seconds % 30 == 0 {
+                    print("ALARM!")
+                    playSound()
+                }
+                if seconds == 0 {
+                    start.setTitle("DONE", for: .normal)
+                }
                 
             } else {
              timer.invalidate()
                 
-            playSound()
+            playSoundTwice()
+                
             }
-        
-        
+            
+          
+
+         
         
         
         
@@ -112,12 +182,12 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func stopPressed(_ sender: UIButton) {
-        timer.invalidate()
-        seconds = 30
-        slider.setValue(30, animated: true)
-        label.text = "30"
-        
-    }
+//    @IBAction func stopPressed(_ sender: UIButton) {
+//        timer.invalidate()
+//        seconds = 30
+//        slider.setValue(30, animated: true)
+//        label.text = "30"
+//
+//    }
 }
 
