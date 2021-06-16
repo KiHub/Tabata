@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         
         label.text = "30"
         start.layer.cornerRadius = 25
-        stop.layer.cornerRadius = 25
+     //   stop.layer.cornerRadius = 25
         slider.minimumTrackTintColor = UIColor.black
         //slider.currentMinimumTrackImage = UIImage.
         slider.setValue(30, animated: true)
@@ -151,6 +151,12 @@ class ViewController: UIViewController {
                 }
                 if seconds == 0 {
                     start.setTitle("DONE", for: .normal)
+                    
+                   // seconds = 30
+                   // slider.setValue(30, animated: true)
+                   // label.text = "30"
+                    //sender.setTitle("GOO", for: .normal)
+                   // start.setTitle("GOO", for: .normal)
                 }
                 
             } else {
