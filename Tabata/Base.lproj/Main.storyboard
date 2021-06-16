@@ -16,43 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-6z-Ef2">
-                                <rect key="frame" x="30" y="100" width="315" height="467"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-6z-Ef2">
+                                <rect key="frame" x="30" y="30" width="315" height="285.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 seconds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ms6-5S-BV1">
                                         <rect key="frame" x="18" y="0.0" width="279.5" height="75.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="sW5-eZ-vis"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="55"/>
                                         <color key="textColor" red="0.33725490196078434" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="yho-H7-cjo">
-                                        <rect key="frame" x="-2" y="123.5" width="319" height="176.5"/>
+                                        <rect key="frame" x="-2" y="105.5" width="319" height="101"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="mTf-g7-shi"/>
                                             <constraint firstAttribute="width" priority="900" constant="325" id="usj-Y4-1xQ"/>
                                         </constraints>
                                         <connections>
                                             <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZOF-PO-uQ3"/>
                                         </connections>
                                     </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVs-kS-dtp">
-                                        <rect key="frame" x="97.5" y="347" width="120" height="120"/>
-                                        <color key="backgroundColor" red="0.33725490196078434" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="LmG-3T-dX8">
+                                        <rect key="frame" x="57.5" y="235.5" width="200" height="51"/>
+                                        <color key="backgroundColor" red="0.62352941176470589" green="0.90196078431372551" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="Mpj-Jl-vk2"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Qea-hO-BEo"/>
+                                            <constraint firstAttribute="height" constant="50" id="U80-KJ-BYI"/>
+                                            <constraint firstAttribute="width" constant="200" id="quf-cz-Bs6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
-                                        <state key="normal" title="GO">
-                                            <color key="titleColor" red="0.29019607843137252" green="0.66274509803921566" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <segments>
+                                            <segment title="GO"/>
+                                            <segment title="NO"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.33725490196078434" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t3i-Dg-Dye"/>
+                                            <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="MTf-1D-ukI"/>
                                         </connections>
-                                    </button>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="jVs-kS-dtp" firstAttribute="centerX" secondItem="tU5-6z-Ef2" secondAttribute="centerX" id="55k-FB-J1c"/>
+                                    <constraint firstItem="LmG-3T-dX8" firstAttribute="centerX" secondItem="tU5-6z-Ef2" secondAttribute="centerX" id="zXa-1I-4b0"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -61,18 +66,18 @@
                         <constraints>
                             <constraint firstItem="tU5-6z-Ef2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0Yk-ie-NAQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tU5-6z-Ef2" secondAttribute="trailing" constant="30" id="3Uo-vz-jRo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tU5-6z-Ef2" secondAttribute="bottom" constant="100" id="G0W-RV-RlY">
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tU5-6z-Ef2" secondAttribute="bottom" constant="150" id="G0W-RV-RlY">
                                 <variation key="heightClass=compact-widthClass=compact" constant="35"/>
                             </constraint>
-                            <constraint firstItem="tU5-6z-Ef2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Ncc-jb-2iR">
+                            <constraint firstItem="tU5-6z-Ef2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Ncc-jb-2iR">
                                 <variation key="heightClass=compact-widthClass=compact" constant="35"/>
                             </constraint>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="ms6-5S-BV1" id="jf6-o1-shv"/>
+                        <outlet property="segmentedControl" destination="LmG-3T-dX8" id="Rwa-qK-BXI"/>
                         <outlet property="slider" destination="yho-H7-cjo" id="mdf-iq-QfB"/>
-                        <outlet property="start" destination="jVs-kS-dtp" id="eqz-ac-9Hn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
