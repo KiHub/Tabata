@@ -70,13 +70,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         label.text = "30"
         start.layer.cornerRadius = 25
         //   stop.layer.cornerRadius = 25
-        slider.minimumTrackTintColor = UIColor.black
+        slider.minimumTrackTintColor = #colorLiteral(red: 0.337254902, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
         //slider.currentMinimumTrackImage = UIImage.
         slider.setValue(30, animated: true)
-        
+        slider.thumbTintColor = #colorLiteral(red: 0.9607843137, green: 0.3607843137, blue: 0.2784313725, alpha: 1)
         
         
         
