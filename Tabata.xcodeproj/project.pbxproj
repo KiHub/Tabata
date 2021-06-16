@@ -15,6 +15,7 @@
 		0B6F2DF526794DED00A0D270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2DF326794DED00A0D270 /* LaunchScreen.storyboard */; };
 		0B6F2DFF26796BA500A0D270 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2DFE26796BA500A0D270 /* alarm_sound.mp3 */; };
 		0B6F2E022679F45F00A0D270 /* retro_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2E012679F45F00A0D270 /* retro_sound.wav */; };
+		0B6F2E05267A109800A0D270 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2E04267A109800A0D270 /* win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0B6F2DF626794DED00A0D270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B6F2DFE26796BA500A0D270 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = SOURCE_ROOT; };
 		0B6F2E012679F45F00A0D270 /* retro_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retro_sound.wav; sourceTree = SOURCE_ROOT; };
+		0B6F2E04267A109800A0D270 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				0B6F2DF126794DED00A0D270 /* Assets.xcassets */,
 				0B6F2DF326794DED00A0D270 /* LaunchScreen.storyboard */,
 				0B6F2E012679F45F00A0D270 /* retro_sound.wav */,
+				0B6F2E04267A109800A0D270 /* win.wav */,
 				0B6F2DFE26796BA500A0D270 /* alarm_sound.mp3 */,
 				0B6F2DF626794DED00A0D270 /* Info.plist */,
 			);
@@ -133,6 +136,7 @@
 				0B6F2DF526794DED00A0D270 /* LaunchScreen.storyboard in Resources */,
 				0B6F2DF226794DED00A0D270 /* Assets.xcassets in Resources */,
 				0B6F2DFF26796BA500A0D270 /* alarm_sound.mp3 in Resources */,
+				0B6F2E05267A109800A0D270 /* win.wav in Resources */,
 				0B6F2E022679F45F00A0D270 /* retro_sound.wav in Resources */,
 				0B6F2DF026794DEB00A0D270 /* Main.storyboard in Resources */,
 			);
