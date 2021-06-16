@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var start: UIButton!
+
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -99,30 +99,7 @@ class ViewController: UIViewController {
         label.text = String(seconds)
     }
     
-    @IBAction func startPressed(_ sender: UIButton) {
-        
-        
-        let buttonTitle = sender.title(for: .normal)
-        print("\(String(describing: buttonTitle))")
-        
-        switch buttonTitle {
-        case "NO":
-            timer.invalidate()
-            seconds = 150
-            slider.setValue(150, animated: true)
-            label.text = "150"
-            sender.setTitle("GO", for: .normal)
-        case "DONE":
-            timer.invalidate()
-            seconds = 150
-            slider.setValue(150, animated: true)
-            label.text = "150"
-            sender.setTitle("GO", for: .normal)
-        default:
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-            sender.setTitle("NO", for: .normal)
-        }
-    }
+   
     
     @objc func updateTimer() {
         if seconds != 0 {
@@ -134,9 +111,7 @@ class ViewController: UIViewController {
                 print("ALARM!")
                 playSound()
             }
-            if seconds == 0 {
-                start.setTitle("DONE", for: .normal)
-            }
+           
             
         } else {
             timer.invalidate()
