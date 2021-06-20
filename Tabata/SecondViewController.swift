@@ -9,9 +9,13 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+ 
+        
         // Do any additional setup after loading the view.
     }
     
@@ -25,7 +29,13 @@ class SecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+            if event?.subtype == UIEvent.EventSubtype.motionShake {
+                self.dismiss(animated: true, completion: nil)
+            }
+    }
 
+    
     @IBAction func upPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
