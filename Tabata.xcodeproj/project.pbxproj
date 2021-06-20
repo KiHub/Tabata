@@ -16,6 +16,7 @@
 		0B6F2DFF26796BA500A0D270 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2DFE26796BA500A0D270 /* alarm_sound.mp3 */; };
 		0B6F2E022679F45F00A0D270 /* retro_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2E012679F45F00A0D270 /* retro_sound.wav */; };
 		0B6F2E05267A109800A0D270 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F2E04267A109800A0D270 /* win.wav */; };
+		0B95C183267F5C2500E7B33B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C182267F5C2500E7B33B /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0B6F2DFE26796BA500A0D270 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = SOURCE_ROOT; };
 		0B6F2E012679F45F00A0D270 /* retro_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = retro_sound.wav; sourceTree = SOURCE_ROOT; };
 		0B6F2E04267A109800A0D270 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = SOURCE_ROOT; };
+		0B95C182267F5C2500E7B33B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				0B6F2DE826794DEB00A0D270 /* AppDelegate.swift */,
 				0B6F2DEA26794DEB00A0D270 /* SceneDelegate.swift */,
 				0B6F2DEC26794DEB00A0D270 /* ViewController.swift */,
+				0B95C182267F5C2500E7B33B /* SecondViewController.swift */,
 				0B6F2DEE26794DEB00A0D270 /* Main.storyboard */,
 				0B6F2DF126794DED00A0D270 /* Assets.xcassets */,
 				0B6F2DF326794DED00A0D270 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B95C183267F5C2500E7B33B /* SecondViewController.swift in Sources */,
 				0B6F2DED26794DEB00A0D270 /* ViewController.swift in Sources */,
 				0B6F2DE926794DEB00A0D270 /* AppDelegate.swift in Sources */,
 				0B6F2DEB26794DEB00A0D270 /* SceneDelegate.swift in Sources */,

@@ -118,7 +118,10 @@ class ViewController: UIViewController {
             playSoundTwice()
             segmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
             
+            
         }
     }
+    
+    
 }
 
