@@ -118,9 +118,10 @@ class ViewController: UIViewController {
             playSoundTwice()
             segmentedControl.selectedSegmentIndex = UISegmentedControl.noSegment
             
-            
+            self.performSegue(withIdentifier: "goToUp", sender: self)
         }
     }
+    
     
     
 }
